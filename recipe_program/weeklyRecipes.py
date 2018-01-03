@@ -70,8 +70,8 @@ toaddr = ["simongolden1987@msn.com"]
 
 msg = MIMEMultipart()
 
-msg['From'] = 'simongolden1987 @ msn.com'
-msg['To'] = 'simongolden1987@msn.com'
+msg['From'] = 'YOUR EMAIL GOES HERE'
+msg['To'] = 'YOUR EMAIL GOES HERE'
 msg['Subject'] = "Shopping List"
 
 attachment = open("/Python/recipes_program/Shoppinglist.txt", "r")
@@ -82,7 +82,7 @@ msg.attach(sl)
 
 s = smtplib.SMTP('smtp-mail.outlook.com', 587)
 s.starttls()
-s.login(fromaddr, 'Ic3-Man!@#')
+s.login(fromaddr, 'YOUR PASSWORD GOES HERE')
 text = msg.as_string()
 s.sendmail(fromaddr, toaddr, text)
 s.quit()
