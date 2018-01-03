@@ -1,0 +1,6 @@
+#Format the recipes starting at line 1 below
+Name of Recipe
+www.urlofrecipe.com
+qty,measurement,description
+1,example,how the lines should look
+1,cp,sugar
