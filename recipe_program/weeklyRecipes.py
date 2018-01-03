@@ -82,7 +82,7 @@ msg.attach(sl)
 
 s = smtplib.SMTP('smtp-mail.outlook.com', 587)
 s.starttls()
-s.login(fromaddr, 'YOUR PASSWORD GOES HERE')
+s.login(fromaddr, 'YOUR PASSWORD HERE')
 text = msg.as_string()
 s.sendmail(fromaddr, toaddr, text)
 s.quit()
