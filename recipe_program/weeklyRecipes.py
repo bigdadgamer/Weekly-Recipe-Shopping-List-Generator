@@ -15,7 +15,7 @@ chicken = 'chicken'
 beef = 'beef'
 v = 0
 
-for file_name in glob.glob("/Python/recipes_program/recipe_files/" + '*.csv'):
+for file_name in glob.glob("recipe_files/" + '*.csv'):
     with open(file_name, 'r') as f:
         data = [tuple(line) for line in _csv.reader(f)]
         recipes.append(data)
@@ -66,15 +66,15 @@ print(chck)
 print(bf)
 
 fromaddr = "simongolden1987@msn.com"
-toaddr = ["simongolden1987@msn.com"]
+toaddr = ["simongolden1987@msn.com"] #This should be a list of strings
 
 msg = MIMEMultipart()
 
 msg['From'] = 'YOUR EMAIL GOES HERE'
-msg['To'] = 'YOUR EMAIL GOES HERE'
+msg['To'] = 'YOUR EMAIL GOES HERE' #This has to be a string, make sure to not make it a tuple or list.
 msg['Subject'] = "Shopping List"
 
-attachment = open("/Python/recipes_program/Shoppinglist.txt", "r")
+attachment = open("Shoppinglist.txt", "r")
 sl = MIMEText(attachment.read())
 attachment.close()
 
